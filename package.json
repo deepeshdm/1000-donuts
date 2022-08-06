@@ -1,9 +1,12 @@
 {
+  "homepage":"https://deepeshdm.github.io/1000-donuts",
   "repository": "#",
   "license": "UNLICENSED",
   "scripts": {
     "build": "webpack --config ./bundler/webpack.prod.js",
-    "dev": "webpack serve --config ./bundler/webpack.dev.js"
+    "dev": "webpack serve --config ./bundler/webpack.dev.js",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "dependencies": {
     "@babel/core": "^7.13.1",
