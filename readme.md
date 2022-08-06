@@ -1,20 +1,23 @@
 # 1000 Donuts !
+A 3D design of 1000 donuts floating in space, made using Three.js which is an abstraction layer over WebGL.
 
 <div float="left" align="center">
 <img src="/static/sample.png"  width="95%"/>
 </div>
 
-### Setup
-Download [Node.js](https://nodejs.org/en/download/).
-Run this followed commands:
+## To Run (Locally)
 
-``` bash
-### Install dependencies (only the first time)
+1. Git clone the project repository on your local system
+```javascipt
+git clone https://github.com/deepeshdm/1000-donuts.git
+```
+
+2. Install dependencies in package.json
+```javascipt
 npm install
+```
 
-### Run the local server at localhost:8080
+3. Start the local server
+```javascipt
 npm run dev
-
-### Build for production in the dist/ directory
-npm run build
 ```
