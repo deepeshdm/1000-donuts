@@ -1,5 +1,4 @@
-# Three.js Starter
-Courtesy of Bruno Simon of https://threejs-journey.xyz/
+# 1000 Donuts !
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
