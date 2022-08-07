@@ -7,3 +7,15 @@
     position: fixed;
     
 }
+
+#info {
+	position: absolute;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:xx-small;
+	top: 10px;
+	width: 100%;
+	text-align: left;
+	z-index: 100;
+	display:block;
+}
