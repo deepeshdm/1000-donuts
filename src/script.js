@@ -171,8 +171,8 @@ function animate() {
     // Add rotation to all the donuts
     for (let i = 0; i < donuts.length; i++) {
         let torus = donuts[i];
-        torus.rotation.y += (Math.random()*0.007)
-        torus.rotation.x += (Math.random()*0.007)
+        torus.rotation.x += 0.0025
+        torus.rotation.y += 0.0025
     }
 
     renderer.render(scene, camera);
