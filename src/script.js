@@ -80,6 +80,9 @@ const material3 = new THREE.MeshPhongMaterial({ color: meshcolor, shininess: 100
 // generate random donuts 
 const num_of_donuts = 1300
 
+// list of all donuts
+let donuts = []
+
 for (let i = 0; i < num_of_donuts; i++) {
 
     // randomly select material
@@ -101,7 +104,7 @@ for (let i = 0; i < num_of_donuts; i++) {
     torus.scale.set(size, size, size)
 
     scene.add(torus);
-    // console.log(i)
+    donuts.push(torus)
 }
 
 //---------------------------------------------------------
@@ -154,7 +157,7 @@ const audioLoader = new THREE.AudioLoader();
 audioLoader.load( '/sounds/ambience.ogg', function( buffer ) {
 	sound.setBuffer( buffer );
 	sound.setLoop( true );
-	sound.setVolume( 0.9 );
+	sound.setVolume( 0.99 );
 	sound.play();
 });
 
@@ -164,6 +167,13 @@ audioLoader.load( '/sounds/ambience.ogg', function( buffer ) {
 
 function animate() {
     requestAnimationFrame(animate);
+
+    // Add rotation to all the donuts
+    for (let i = 0; i < donuts.length; i++) {
+        let torus = donuts[i];
+        torus.rotation.y += (Math.random()*0.007)
+        torus.rotation.x += (Math.random()*0.007)
+    }
 
     renderer.render(scene, camera);
 };
