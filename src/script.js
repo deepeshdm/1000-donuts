@@ -154,7 +154,7 @@ const audioLoader = new THREE.AudioLoader();
 audioLoader.load( '/sounds/ambience.ogg', function( buffer ) {
 	sound.setBuffer( buffer );
 	sound.setLoop( true );
-	sound.setVolume( 0.5 );
+	sound.setVolume( 0.9 );
 	sound.play();
 });
 
