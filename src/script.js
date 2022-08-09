@@ -90,14 +90,22 @@ for (let i = 0; i < num_of_donuts; i++) {
     const material = materials[Math.floor(Math.random() * materials.length)]
     const torus = new THREE.Mesh(geometry, material);
 
+    // direction of rotation. default is clockwise
+    let direction = 1
+
+    // rotate half donuts in opposite direction
+    if(i>num_of_donuts/2){
+        direction: -1;
+    }
+
     // position randomly
     torus.position.x = (Math.random() - 0.5) * 50
     torus.position.y = (Math.random() - 0.5) * 50
     torus.position.z = (Math.random() - 0.5) * 50
 
     // rotate randomly
-    torus.rotation.x = Math.random() * Math.PI
-    torus.rotation.y = Math.random() * Math.PI
+    torus.rotation.x = (Math.random() * Math.PI) * direction;
+    torus.rotation.y = (Math.random() * Math.PI) * direction;
 
     // size donuts randomly
     const size = Math.random() * 1.3
