@@ -71,11 +71,17 @@ const texture1 = loader.load('/textures/donut1.jpg');
 const texture2 = loader.load('/textures/donut2.jpg');
 const texture3 = loader.load('/textures/donut3.jpg');
 
+// normal textures
+const Normaltexture1 = loader.load('textures/donut1Normal.png');
+const Normaltexture2 = loader.load('textures/donut2Normal.png');
+const Normaltexture3 = loader.load('textures/donut3Normal.png');
+
+
 // materials
 const meshcolor = 0xCEC3FE
-const material1 = new THREE.MeshPhongMaterial({ color: meshcolor, shininess: 100, map: texture1 });
-const material2 = new THREE.MeshPhongMaterial({ color: meshcolor, shininess: 100, map: texture2 });
-const material3 = new THREE.MeshPhongMaterial({ color: meshcolor, shininess: 100, map: texture3 });
+const material1 = new THREE.MeshPhongMaterial({ color: meshcolor, shininess: 100, map: texture1 , normalMap:Normaltexture1});
+const material2 = new THREE.MeshPhongMaterial({ color: meshcolor, shininess: 100, map: texture2 , normalMap:Normaltexture2});
+const material3 = new THREE.MeshPhongMaterial({ color: meshcolor, shininess: 100, map: texture3 , normalMap:Normaltexture3});
 
 // generate random donuts 
 const num_of_donuts = 1300
